@@ -1,0 +1,51 @@
+body, html {
+  background: #141414;
+}
+
+body {
+  padding-top: 4.5rem;
+}
+
+.navbar {
+  background-color: rgba(0,0,0,.7);
+  border-radius: 0px;
+}
+
+.navbar-brand svg {
+  height: 1.75em;
+}
+
+.navbar-brand path {
+  stroke: #e50914;
+  fill: #e50914;
+}
+
+.poster {
+  height: 590px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.poster:first-of-type {
+  margin-left: 15px;
+}
+
+.poster:last-of-type {
+  margin-right: 15px;
+}
+
+.list-title {
+  color: #e5e5e5;
+  font-family: "Helvetica", "Arial"
+}
+
+.light {
+  font-weight: 200;
+}
+
+.text-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-left: -15px;
+}
