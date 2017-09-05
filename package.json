@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "dev": "webpack-dev-server --hot --inline"
   },
-  "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
   "author": "",
   "license": "MIT",
   "dependencies": {
