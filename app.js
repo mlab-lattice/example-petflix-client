@@ -9,7 +9,7 @@ mongodb.MongoClient.connect(process.env.MONGO_URI).then(db => {
   let petflix = db.collection('petflix')
   
   app.get('/', (req, res) => {
-    res.send('Hello World')
+    res.sendFile('index.html')
   })
 
   app.get('/contacts', (req, res) => {
