@@ -4,6 +4,7 @@
   "description": "Petflix",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "webpack-dev-server --hot --inline"
   },
   "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
