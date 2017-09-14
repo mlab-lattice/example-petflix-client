@@ -4,7 +4,7 @@ const app = express()
 
 app.use(express.static('dist'))
 
-mongodb.MongoClient.connect(process.env.MONGO_URI).then(db => {
+mongodb.MongoClient.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/test').then(db => {
   
   let petflix = db.collection('petflix')
   
@@ -12,7 +12,7 @@ mongodb.MongoClient.connect(process.env.MONGO_URI).then(db => {
     res.sendFile(__dirname + '/index.html')
   })
 
-  app.get('/contacts', (req, res) => {
+  app.get('/videos', (req, res) => {
     petflix.find().toArray().then(data => {
       res.send(data)
     })
@@ -20,8 +20,12 @@ mongodb.MongoClient.connect(process.env.MONGO_URI).then(db => {
   
   app.get('/random', (req, res) => {
     petflix.aggregate([{ $sample: { size: 1 } }]).toArray().then(data => {
-      res.send(data)
+      res.redirect(`/view/${data[0]._id}`)
     })
+  })
+  
+  app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
   })
 
   app.listen(process.env.PORT || 8000, () => {

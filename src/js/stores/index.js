@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducers from '../reducers'
+import { dispatchFetchVideos } from '../actions'
 
 let poster = {
   title: "Title",
@@ -18,7 +19,7 @@ let mainVid = {
 
 let originals = []
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 10; i++) {
   poster.id = i
   poster.image = `https://unsplash.it/295/590?image=${10 + i}`
   poster.hoverImage = `https://unsplash.it/295/590?image=${20 + i}`
@@ -28,30 +29,18 @@ for (let i = 0; i < 6; i++) {
 
 
 const defaultState = {
-  lists: [
-    {
-      name: "Petflix Originals",
-      list: originals
-    },
-    {
-      name: "Dogs",
-      list: originals
-    },
-    {
-      name: "Cats",
-      list: originals
-    },
-    {
-      name: "Others",
-      list: originals
-    }
-  ],
+  allVids: originals.concat(mainVid),
+  lists: {
+    "Petflix Originals": originals,
+    "Dogs": originals,
+    "Cats": originals
+  },
   mainVid
 }
 
 const middleware = applyMiddleware(createLogger(), thunk)
 const store = createStore(reducers, defaultState, middleware)
-
+store.dispatch(dispatchFetchVideos)
 window.store = store // expose store globally to manipulate in browser
 
 export default store

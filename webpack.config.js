@@ -6,9 +6,9 @@ module.exports = {
   entry: path.join(__dirname, 'src/js/client.js'),
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'client.bundle.js',
-    publicPath: path.join(__dirname, 'src/assets')
+    filename: 'client.bundle.js'
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -22,11 +22,12 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'src')
+    contentBase: path.join(__dirname, 'src'),
+    historyApiFallback: true
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      CONTACTS_API_URI: 'http://localhost:9900'
+      CONTACTS_API_URI: 'http://localhost:8000'
     })
   ]
 };

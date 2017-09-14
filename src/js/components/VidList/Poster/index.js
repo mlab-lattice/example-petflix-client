@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 
 export default class Poster extends React.Component {
   render() {
@@ -20,7 +21,9 @@ export default class Poster extends React.Component {
     }
     
     return (
-      <div className={'col ' + (isOriginal ? 'poster-original' : 'poster')} style={style}>
+      
+      <div className={'col-6 col-lg-2 ' + (isOriginal ? 'poster-original' : 'poster')} style={style}>
+      <Link to={`/view/${video._id}`}>
         <div className="overlay d-flex justify-content-center" style={overlayStyle}>
           
           <div className="playring align-self-center d-flex mx-auto">
@@ -39,7 +42,9 @@ export default class Poster extends React.Component {
             <h1 className="text-center">{video.title}</h1>
           </div>
         }
+        </Link>
       </div>
+      
     )
   }
 }
