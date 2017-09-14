@@ -7,10 +7,6 @@ app.use(express.static('dist'))
 mongodb.MongoClient.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/test').then(db => {
   
   let petflix = db.collection('petflix')
-  
-  app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-  })
 
   app.get('/videos', (req, res) => {
     petflix.find().toArray().then(data => {

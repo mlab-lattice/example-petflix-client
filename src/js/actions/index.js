@@ -1,5 +1,5 @@
 import Api from '../services'
-import * as types from '../constants/ActionTypes'
+import * as types from '../constants/actionTypes'
 
 export const dispatchFetchVideos = (dispatch) => {
   dispatch({ type: types.FETCH_VIDEOS_PENDING })
