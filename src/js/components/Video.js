@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Header from './Header'
 import VidList from './VidList'
 import { Switch, Route, Link } from 'react-router-dom'
-var GifPlayer = from 'react-gif-player'
+import GifPlayer from 'react-gif-player'
 
 class ViewVideo extends React.Component {
   render() {
