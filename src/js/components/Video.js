@@ -26,7 +26,7 @@ class ViewVideo extends React.Component {
                 <h2 className="list-title">{video.title}</h2>
               </div>
                 <video poster="//i.imgur.com/LJohC29h.jpg" preload="auto" autoplay="autoplay" muted="muted" loop="loop" webkit-playsinline="" style="width: 360px; height: 480px;">
-                  <source src={video.video} type="video/mp4">
+                  <source src={video.video} type="video/mp4" />
                 </video>
             </div>
           </div>
