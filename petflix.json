@@ -70,7 +70,7 @@
   "image": "images/dog7.jpg",
   "hoverImage": "images/dog8.jpg",
   "type": "Original",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "originals"
 },
 {
@@ -85,7 +85,7 @@
   "image": "images/cat3.jpg",
   "hoverImage": "images/cat4.jpg",
   "type": "Original",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "originals"
 },
 {
@@ -100,7 +100,7 @@
   "image": "images/cat5.jpg",
   "hoverImage": "images/cat6.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -115,7 +115,7 @@
   "image": "images/cat9.jpg",
   "hoverImage": "images/cat10.jpg",
   "type": "Original",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "originals"
 },
 {
@@ -130,7 +130,7 @@
   "image": "images/cat7.jpg",
   "hoverImage": "images/cat8.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -145,7 +145,7 @@
   "image": "images/cat11.jpg",
   "hoverImage": "images/cat12.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -160,7 +160,7 @@
   "image": "images/cat13.jpg",
   "hoverImage": "images/cat14.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -175,7 +175,7 @@
   "image": "images/cat15.jpg",
   "hoverImage": "images/cat16.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -190,7 +190,7 @@
   "image": "images/cat17.jpg",
   "hoverImage": "images/cat18.jpg",
   "type": "Cat",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "cats"
 },
 {
@@ -205,7 +205,7 @@
   "image": "images/dog5.jpg",
   "hoverImage": "images/dog6.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 },
 {
@@ -220,7 +220,7 @@
   "image": "images/dog11.jpg",
   "hoverImage": "images/dog12.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 },
 {
@@ -235,7 +235,7 @@
   "image": "images/dog9.jpg",
   "hoverImage": "images/dog10.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 },
 {
@@ -250,7 +250,7 @@
   "image": "images/dog13.jpg",
   "hoverImage": "images/dog14.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 },
 {
@@ -265,7 +265,7 @@
   "image": "images/dog15.jpg",
   "hoverImage": "images/dog16.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 },
 {
@@ -280,7 +280,7 @@
   "image": "images/dog17.jpg",
   "hoverImage": "images/dog18.jpg",
   "type": "Dog",
-  "video": "LJohC29",
+  "video": "https://i.imgur.com/LJohC29.gifv",
   "category": "dogs"
 }
 ]
