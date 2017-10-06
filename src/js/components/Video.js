@@ -19,15 +19,15 @@ class ViewVideo extends React.Component {
     
     return (
       <div className="h-100">
-        <Header />
+        <Header style={{position: "inherit"}} />
         <div className="container h-100">
           
           <div className="row h-100 align-items-center justify-content-center">
-            <div className="">
+            <div className="h-100">
               <div className="col-12">
                 <h2 className="list-title">{video.title}</h2>
               </div>
-                <video src={video.video} poster={video.videoImg} preload="auto" autoPlay muted loop webkitPlaysinline="" className="gifvideo">
+                <video src={video.video} poster={video.videoImg} preload="auto" autoPlay muted loop webkitPlaysinline="h-100" className="gifvideo">
                   
                 </video>
             </div>
