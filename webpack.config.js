@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin({
-      CONTACTS_API_URI: 'http://localhost:8000'
+      CONTACTS_API_URI: debug ? 'http://localhost:8000' : ''
     })
   ]
 };
