@@ -15,6 +15,8 @@ class ViewVideo extends React.Component {
       video: "#"
     }
     
+    
+    
     return (
       <div className="h-100">
         <Header />
@@ -25,7 +27,7 @@ class ViewVideo extends React.Component {
               <div className="col-12">
                 <h2 className="list-title">{video.title}</h2>
               </div>
-                <video poster="//i.imgur.com/LJohC29h.jpg" preload="auto" autoplay="autoplay" muted="muted" loop="loop" webkit-playsinline="" style="width: 360px; height: 480px;">
+                <video poster="//i.imgur.com/LJohC29h.jpg" preload="auto" autoPlay muted loop webkitPlaysinline="" className="gifvideo">
                   <source src={video.video} type="video/mp4" />
                 </video>
             </div>
