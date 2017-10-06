@@ -4,7 +4,7 @@ import Header from './Header'
 import VidList from './VidList'
 import { Switch, Route, Link } from 'react-router-dom'
 
-class ViewVideo extends React.Component { 
+class ViewVideo extends React.Component {
   render() {
     
     let { vidid, allVids } = this.props
@@ -25,14 +25,17 @@ class ViewVideo extends React.Component {
               <div className="col-12">
                 <h2 className="list-title">{video.title}</h2>
               </div>
-                <img className="" src={video.video} />
+              <blockquote class="imgur-embed-pub" lang="en" data-id={video.video}>
+                <a href={"//imgur.com/"+video.video}>{video.title}</a>
+              </blockquote>
+                // <img className="" src={video.video} />
             </div>
           </div>
         </div>
         
       </div>
     )
-  } 
+  }
 }
 
 const mapStateToProps = (state) => {
