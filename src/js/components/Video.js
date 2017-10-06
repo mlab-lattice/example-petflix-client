@@ -28,6 +28,7 @@ class ViewVideo extends React.Component {
               <blockquote class="imgur-embed-pub" lang="en" data-id={video.video}>
                 <a href={"//imgur.com/"+video.video}>{video.title}</a>
               </blockquote>
+              <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
                 // <img className="" src={video.video} />
             </div>
           </div>
