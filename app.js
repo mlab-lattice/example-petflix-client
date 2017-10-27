@@ -11,6 +11,12 @@ mongodb.MongoClient.connect('mongodb://tim:pass@ds163294.mlab.com:63294/calhacks
     petflix.find().toArray().then(data => res.send(data))
   )
   
+  app.get('/random', (req, res) => {
+    petflix.aggregate([{ $sample: { size: 1 } }]).toArray().then(data => {
+      res.redirect(`/view/${data[0]._id}`)
+    })
+  })
+  
   app.get('*', (req, res) =>
     res.sendFile(__dirname + '/index.html')
   )
