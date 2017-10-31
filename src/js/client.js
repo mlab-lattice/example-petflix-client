@@ -5,6 +5,9 @@ import ViewVid from "./components/Video"
 import store from './stores'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import '../index.html'
+import '../styles/fontello.css'
+import '../styles/main.css'
 
 ReactDOM.render(
   <Provider store={store}>

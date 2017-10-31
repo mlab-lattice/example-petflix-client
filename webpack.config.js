@@ -1,6 +1,7 @@
 const debug = process.env.NODE_ENV !== "production";
 const path = require('path');
 const webpack = require("webpack");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src/js/client.js'),
@@ -16,9 +17,32 @@ module.exports = {
         exclude: [/node_modules/],
         use: {
           loader: 'babel-loader',
-          options: { presets: ['es2015', 'stage-0', 'react'] }
+          options: { presets: ['stage-0', 'env', 'react'] }
         }
+      },
+      {
+        test: /index\.html$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]'
+          }
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        use: [
+          'file-loader'
+        ]
       }
+      
     ]
   },
   devServer: {
@@ -28,6 +52,10 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin({
       CONTACTS_API_URI: debug ? 'http://localhost:8000' : ''
-    })
+    }),
+    new CopyWebpackPlugin([
+      //{ from: 'src/font', to: 'font' },
+      { from: 'src/images', to: 'images' }
+    ])
   ]
 };
