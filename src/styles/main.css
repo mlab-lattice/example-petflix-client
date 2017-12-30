@@ -324,3 +324,16 @@ p {
 .gifvideo {
   width: 100%;
 }
+
+.SocialMediaShareButton, .SocialMediaShareButton div {
+  display: inline;
+}
+
+.social-icon {
+  margin: 0px 5px 0px 5px;
+  border-radius: 50%;
+}
+
+.social-icon:hover {
+  cursor: pointer;
+}
