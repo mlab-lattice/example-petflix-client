@@ -32,7 +32,7 @@ exec:
   - node
   - app.js
   environment:
-    PETFLIX_API_URL: ${api_url}
+    PETFLIX_API_URI: ${api_url}
 
 node_pool: ${node_pool}
 num_instances: ${num_instances}
