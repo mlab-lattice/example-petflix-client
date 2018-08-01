@@ -1,0 +1,36 @@
+$parameters:
+  api_url:
+    type: string
+  node_pool:
+    type: string
+  num_instances:
+    type: number
+    default: 1
+
+type: v1/service
+description: Webserver for public web app. Serves static files for client and proxies to API
+
+ports:
+  "80":
+    protocol: HTTP
+
+build:
+  type: command_build
+
+  base_image:
+    repository: library/node
+    tag: boron
+  command:
+  - npm install
+  - "&&"
+  - npm run build
+
+exec:
+  command:
+  - node
+  - app.js
+  environment:
+    PETFLIX_API_URL: ${api_url}
+
+node_pool: ${node_pool}
+num_instances: ${num_instances}
