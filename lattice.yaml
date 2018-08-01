@@ -13,6 +13,8 @@ description: Webserver for public web app. Serves static files for client and pr
 ports:
   "80":
     protocol: HTTP
+    external_access:
+      public: true
 
 build:
   type: command_build
