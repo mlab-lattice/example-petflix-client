@@ -11,7 +11,7 @@ type: v1/service
 description: Webserver for public web app. Serves static files for client and proxies to API
 
 ports:
-  "80":
+  "8080":
     protocol: HTTP
     external_access:
       public: true
